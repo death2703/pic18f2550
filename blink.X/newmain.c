@@ -4,6 +4,7 @@
  *
  * Created on 3 de octubre de 2020, 09:59 PM
  */
+ // LAT es el registro para poder escibir en un puerto digital
 
 
 #include "conf.h"
@@ -11,10 +12,10 @@
 int led_run[8]={1,2,4,8,16,32,64,128};
 
 void main(void) {
-    ADCON1bits.PCFG = 0b1111;
+    ADCON1bits.PCFG = 0b1111;//Todos los pines digitales
     OSCCONbits.IRCF = 0b111; //Configura oscilador interno (FOSC = 8Mhz)
     OSCCONbits.SCS = 0b10; // Oscilador del sistema = Fosc interno
-    TRISB = 0x0;
+    TRISB = 0x0;// Puerto B como salida 
     while(1){
         for(int i = 0;i<8;i++ ){
             LATB = led_run[i];
