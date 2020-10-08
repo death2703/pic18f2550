@@ -17,7 +17,7 @@ void main(void)
     OSCCONbits.SCS = 0b10;    // Oscilador del sistema = Fosc interno
     TRISB = 0xff;             //Puerto B digital
     LCD_Set_Cursor(0, 0);
-    LCD_Write_String("ATOM FROM HELL");
+    LCD_Write_String("PROTON FROM HELL");
     LCD_Set_Cursor(0, 1);
     LCD_Write_String("LIKE & FOLLOW");
     __delay_ms(3000);
