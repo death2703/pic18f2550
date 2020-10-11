@@ -15,7 +15,7 @@ void main(void)
     ADCON1bits.PCFG = 0b1111; //Todos los pines digitales
     OSCCONbits.IRCF = 0b111;  //Configura oscilador interno (FOSC = 8Mhz)
     OSCCONbits.SCS = 0b10;    // Oscilador del sistema = Fosc interno
-    TRISB = 0xff;             //Puerto B digital
+    TRISB = 0xff;             //Puerto B entrada
     LCD_Set_Cursor(0, 0);
     LCD_Write_String("PROTON FROM HELL");
     LCD_Set_Cursor(0, 1);
